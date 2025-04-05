@@ -39,4 +39,6 @@ Route::post('/posts/{post}/likes', [LikeController::class, 'store'])->name('like
 Route::delete('//posts/{post}/likes', [LikeController::class, 'destroy'])->name('likes.destroy');
 
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', function () {
+    return redirect("/");
+})->name('home');
