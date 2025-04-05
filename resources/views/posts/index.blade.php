@@ -11,7 +11,7 @@
                                 <img
                                     src="{{ $post->user->profile_image ? asset('storage/'. $post->user->profile_image) : ""}}"
                                     alt="{{ $post->user->id }}" class="rounded-circle" width="50" height="50">
-                                <a href="{{ route('profile.show', $post->user->id) }}" class="ml-2"
+                                <a href="{{ route('profile.index', $post->user->id) }}" class="ml-2"
                                    style="text-decoration: none; color: #000;">
                                     <strong>{{ $post->user }}</strong>
 
