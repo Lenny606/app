@@ -66,7 +66,10 @@ php artisan make:model <# Laravel - Instrukce pro instalaci a základní nastave
     - Flag `-m` vytvoří zároveň i migraci pro databázi.
     - Migrace jsou pro správu databázových změn.Name> -m
 
-
+2. **Controller**
+```bash
+php artisan make:controller PostController --resource 
+```
 ## Auth
 ``
 composer require laravel/ui
