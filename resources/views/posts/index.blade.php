@@ -13,7 +13,7 @@
                                     alt="{{ $post->user->id }}" class="rounded-circle" width="50" height="50">
                                 <a href="{{ route('profile.index', $post->user->id) }}" class="ml-2"
                                    style="text-decoration: none; color: #000;">
-                                    <strong>{{ $post->user }}</strong>
+                                    <strong>{{ $post->user->name }}</strong>
 
                                 </a>
                             @else
@@ -23,7 +23,13 @@
                             @endif
                         </div>
                         <div class="card-body">
-                            <p>By <strong>{{ $post->user->username }}</strong>
+                            <div class="text-center mb-3">
+                                <p class="fs-5 text-dark">{{ $post->caption }}</p>
+                                <img src="{{ asset('storage/'. $post->image_path) }}" alt="{{ $post->id }}"
+                                     class="img-fluid rounded"/>
+                            </div>
+
+                            <p>By <strong>{{ $post->user->name }}</strong>
                                 on {{ $post->created_at->format('F d, Y') }}
                             </p>
                             <hr>
@@ -33,7 +39,7 @@
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <form action="{{ route('posts.like', $post->id) }}" method="POST">
+                            <form action="{{ route('posts.index', $post->id) }}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-outline-primary">
                                     Like ({{ $post->likes_count }})

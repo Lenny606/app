@@ -42,7 +42,7 @@ class PostController extends Controller
             'caption' => 'required|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
+        var_dump($data);
         $imagePath = $request->file('image')->store('uploads', 'public');
 
         auth()->user()->posts()->create([
