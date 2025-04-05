@@ -10,7 +10,7 @@ use MongoDB\Laravel\Relations\HasMany;
 class Post extends Model
 {
     protected $connection = 'mongodb';
-    protected $table = 'users'; //collection
+    protected $table = 'posts'; //collection
 
     protected $fillable = ['caption', 'image_path', 'image_url', 'user_id'];
 
