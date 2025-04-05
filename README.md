@@ -67,3 +67,9 @@ php artisan make:model <# Laravel - Instrukce pro instalaci a základní nastave
     - Migrace jsou pro správu databázových změn.Name> -m
 
 
+## Auth
+``
+composer require laravel/ui
+php artisan ui bootstrap --auth
+``
+- package with auth
