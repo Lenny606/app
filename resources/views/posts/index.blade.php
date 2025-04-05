@@ -39,13 +39,22 @@
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <form action="{{ route('posts.index', $post->id) }}" method="POST">
+
+                            <form action="{{  route('likes.store', $post->id) }}" method="POST">
+
                                 @csrf
                                 <button type="submit" class="btn btn-sm btn-outline-primary">
-                                    Like ({{ $post->likes_count }})
+                                    Like
                                 </button>
                             </form>
-                            <span>{{ $post->likes_count > 0 ? $post->likes_count . ' people liked this' : 'No likes yet' }}</span>
+{{--                            {{ dump($post->likes) }} --}}
+                            <span>
+                                @if(count($post->likes))
+                                    <i class="fas fa-thumbs-up"></i>
+                                @else
+                                    <i class="fas fa-thumbs-down"></i>
+                                @endif
+</span>
                         </div>
                     </div>
                 </div>

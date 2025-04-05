@@ -36,7 +36,7 @@ Route::delete('/comments/{comment}', [CommentController::class, 'destroy'])->nam
 
 //LIKES
 Route::post('/posts/{post}/likes', [LikeController::class, 'store'])->name('likes.store');
-Route::delete('//posts/{post}/likes', [LikeController::class, 'destroy'])->name('likes.destroy');
+Route::delete('/posts/{post}/likes', [LikeController::class, 'destroy'])->name('likes.destroy');
 
 
 Route::get('/home', function () {
