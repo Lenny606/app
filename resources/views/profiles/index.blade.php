@@ -7,7 +7,7 @@
         <div class="col-md-4">
             <!-- Profile Picture -->
             <div class="text-center">
-                <img src="{{ $ }}" alt="Profile Picture" class="rounded-circle img-fluid mb-3">
+                <img src="{{ 'https://via.placeholder.com/40'  }}" alt="Profile Picture" class="rounded-circle img-fluid mb-3">
                 <h4 class="font-weight-bold">{{ auth()->user()->name}}</h4>
                 <p class="text-muted">Software Engineer</p>
             </div>
