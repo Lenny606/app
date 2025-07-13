@@ -43,7 +43,10 @@ Laravel vyžaduje propojení složky `storage` s veřejně dostupnou složkou:
    ```bash
    php artisan storage:link
    ```
-
+### Vytvoření Sanctum
+   ```bash
+   php artisan install:api
+   ```
 ---
 
 ## Práce s modely a controllery
